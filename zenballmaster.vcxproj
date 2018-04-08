@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{78A01A03-65FC-4677-85D6-22078BA3EC72}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="assorted\algorithm.cpp" />
+    <ClCompile Include="assorted\assorted_sorts.cpp" />
+    <ClCompile Include="assorted\backtrack.cpp" />
+    <ClCompile Include="assorted\bitwiddling.c" />
+    <ClCompile Include="assorted\bitwise_permutations.cpp" />
+    <ClCompile Include="assorted\datastructs.c" />
+    <ClCompile Include="assorted\diamondcut.cpp" />
+    <ClCompile Include="assorted\knapsack.cpp" />
+    <ClCompile Include="assorted\openglitters.cpp" />
+    <ClCompile Include="assorted\quicksort.cpp" />
+    <ClCompile Include="assorted\random.cpp" />
+    <ClCompile Include="assorted\simplex.cpp" />
+    <ClCompile Include="assorted\speed-test.cpp" />
+    <ClCompile Include="assorted\util.cpp" />
+    <ClCompile Include="assorted\zenballmaster.cpp" />
+    <ClCompile Include="concurrency\single_task_queue.cpp" />
+    <ClCompile Include="cpp_concepts\exceptional_guidelines.cpp" />
+    <ClCompile Include="cpp_concepts\exceptionsafe_stack.cpp" />
+    <ClCompile Include="cpp_concepts\expressions.cpp" />
+    <ClCompile Include="cpp_concepts\inheritance.cpp" />
+    <ClCompile Include="cpp_concepts\iterators.cpp" />
+    <ClCompile Include="cpp_concepts\smart_pointers.cpp" />
+    <ClCompile Include="cpp_concepts\templates.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_approx_string_matching.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_denominations.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_fair_partition.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_library_shelves.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_longest_sub_sequence.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_shuffle.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_string_break.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_string_compression.cpp" />
+    <ClCompile Include="dynamic_programming\dynapro_win_probability.cpp" />
+    <ClCompile Include="geometry\convex_hull.cpp" />
+    <ClCompile Include="geometry\line_segment_intersection.cpp" />
+    <ClCompile Include="geometry\triangulation.cpp" />
+    <ClCompile Include="graphs\edmondkarp_maxflow.cpp" />
+    <ClCompile Include="graphs\floyd.cpp" />
+    <ClCompile Include="graphs\gaffe.cpp" />
+    <ClCompile Include="graphs\graph_lite.cpp" />
+    <ClCompile Include="graphs\mincost_matching.cpp" />
+    <ClCompile Include="graphs\topological_sort.cpp" />
+    <ClCompile Include="grid_traversals\a-star.cpp" />
+    <ClCompile Include="grid_traversals\concentric_rhombi.cpp" />
+    <ClCompile Include="grid_traversals\concentric_squares.cpp" />
+    <ClCompile Include="grid_traversals\gravitate.cpp" />
+    <ClCompile Include="grid_traversals\knight.cpp" />
+    <ClCompile Include="grid_traversals\raster_scan.cpp" />
+    <ClCompile Include="grid_traversals\spiral.cpp" />
+    <ClCompile Include="grid_traversals\zigzag.cpp" />
+    <ClCompile Include="practice\cpractice.c" />
+    <ClCompile Include="practice\practice.cpp" />
+    <ClCompile Include="strings\cstring_quicksort.cpp" />
+    <ClCompile Include="strings\cstring_sort.cpp" />
+    <ClCompile Include="strings\horspool.cpp" />
+    <ClCompile Include="strings\kmp.cpp" />
+    <ClCompile Include="strings\regex_vexation.cpp" />
+    <ClCompile Include="strings\suffix_arrays.cpp" />
+    <ClCompile Include="trees\heap.cpp" />
+    <ClCompile Include="trees\max_heap.cpp" />
+    <ClCompile Include="trees\treaps.cpp" />
+    <ClCompile Include="value_semantics\assignmentop.cpp" />
+    <ClCompile Include="value_semantics\myvector.cpp" />
+    <ClCompile Include="value_semantics\practice1.cpp" />
+    <ClCompile Include="value_semantics\talksource.cpp" />
+    <ClCompile Include="value_semantics\type_erasure.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="geometry\geometry.h" />
+    <ClInclude Include="grid_traversals\grid_traversals.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

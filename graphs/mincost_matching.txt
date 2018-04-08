@@ -1,0 +1,28 @@
+5
+0 2 7 2 3
+1 3 9 3 3
+1 3 3 1 2
+4 0 1 0 2
+0 0 3 0 0
+//(1, 6), (2, 7), (3, 9), (4, 8) and (5, 10) of cost 5.
+//http://math.mit.edu/~goemans/18433S11/matching-notes.pdf
+
+3
+250 400 350
+400 600 350
+200 400 250
+//$400 + $350 + $200 = $950.
+http://www.math.harvard.edu/archive/20_spring_05/handouts/assignment_overheads.pdf
+
+3 1 1 4
+4 2 2 5
+5 3 4 8
+4 2 5 9
+// https://youtu.be/BUGIhEecipE
+
+90 75 75 80
+35 85 55 65
+125 95 90 105
+45 110 95 115
+//80 55 95 45
+//http://www.math.harvard.edu/archive/20_spring_05/handouts/assignment_overheads.pdf
