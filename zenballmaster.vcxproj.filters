@@ -210,6 +210,12 @@
     <ClCompile Include="assorted\bitwiddling.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="volatile\volatile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\formula_to_number.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="geometry\geometry.h">

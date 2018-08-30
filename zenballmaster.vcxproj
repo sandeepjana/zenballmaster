@@ -158,6 +158,7 @@
     <ClCompile Include="strings\horspool.cpp" />
     <ClCompile Include="strings\kmp.cpp" />
     <ClCompile Include="strings\regex_vexation.cpp" />
+    <ClCompile Include="strings\formula_to_number.cpp" />
     <ClCompile Include="strings\suffix_arrays.cpp" />
     <ClCompile Include="trees\heap.cpp" />
     <ClCompile Include="trees\max_heap.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="value_semantics\practice1.cpp" />
     <ClCompile Include="value_semantics\talksource.cpp" />
     <ClCompile Include="value_semantics\type_erasure.cpp" />
+    <ClCompile Include="volatile\volatile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="geometry\geometry.h" />

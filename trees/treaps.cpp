@@ -7,6 +7,11 @@
 
 //https://e-maxx-eng.appspot.com/data_structures/treap.html
 //also look at refereces\fast-set-operations-using-treaps.pdf
+/* Treaps are randomized search trees where each node in the tree has a key and
+an associated random priority. The keys appear in in-order and the priorities in heap order.
+
+The treap implemented here is a max heap -- numerically largest priority(!) is at root.
+*/
 
 struct Node
 {
@@ -68,6 +73,11 @@ Node* bst_insert(Node* t, int key)
 		t->left = new_node(key);
 }
 
+/* Splits the tree t into two tree ltt (less-than-tree) and get (greater-or-equal tree)
+based on keys and a given token. Also updates 'count' for each node - the number of elements
+in the sub-tree rooted at that node (child count + 1). 
+Split is purely based on keys. No operation based on priorities.
+*/
 void split(Node* t, int token, Node* &ltt, Node* &get)
 {
 	if (nullptr == t)
@@ -93,6 +103,11 @@ void split_copy(const Node* t, int token, Node* &ltt, Node* &get)
 	copy->count = COUNT(copy->left) + 1 + COUNT(copy->right);
 }
 
+/* The root of the treap is t, and passed as reference for updation. 
+Walk down the treap in BST order as long as priority is satisfied. 
+When the priority of n-node is larger than the current t-node, 
+split the subtree rooted at t (including t), and assign left and right subtrees to n.
+*/
 void treap_insert(Node* &t, Node* n)
 {
 	if (nullptr == t)
@@ -210,8 +225,8 @@ Pair split_v2(Node* t, int token)
 	return p;
 }
 
-//pre-condition: ltt and get are two BST such that every element 
-//in ltt is less than every element in get.
+//pre-condition: ltt and get are two BST such that every element's key 
+//in ltt is less than every element's key in get.
 //higher (larger) priority is up in the tree
 void merge(Node*& t, Node* ltt, Node* get)
 {
@@ -339,8 +354,8 @@ struct Gen
 };
 Gen tg;
 
-//#define INPUT std::cin
-#define INPUT tg
+#define INPUT std::cin
+//#define INPUT tg
 
 //inorder traversal should give a sorted array
 std::deque<int> sorted;
@@ -417,7 +432,7 @@ void test_equal(const Node* a, const Node* b)
 
 int main(int, char**)
 {
-	freopen("treap-input.txt", "r", stdin);
+	freopen("trees/treap-input.txt", "r", stdin);
 
 	using namespace std;
 	int T;
@@ -445,11 +460,12 @@ int main(int, char**)
 
 		//test_bst(tree, numnodes);
 		//print(tree);
-		//print(tree, [](Node* a) {return a->priority; });
+		print(tree, [](Node* a) {return a->priority; });
 		test_treap(tree, numnodes);
 
 		//VERY IMPORTANT: update count before split!
 		update_count(tree);
+		//print(tree, [](Node* a) {return a->count; });
 		test_count(numnodes);
 		//print_count(numnodes);
 
